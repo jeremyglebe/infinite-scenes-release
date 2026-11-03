@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#738076" stroke-opacity=".25"/></pattern></defs>
+  <rect width="1000" height="1000" fill="#35423c"/>
+  <path d="M0 650H1000M500 0V1000" stroke="#697369" stroke-width="120"/>
+  <g fill="#a6ad9a" stroke="#172b25" stroke-width="12"><rect x="100" y="120" width="270" height="280"/><rect x="650" y="160" width="230" height="180"/><rect x="100" y="780" width="230" height="130"/><rect x="690" y="780" width="180" height="130"/></g>
+  <g fill="#364e45"><rect x="135" y="155" width="200" height="210"/><rect x="685" y="195" width="160" height="110"/></g>
+  <rect width="1000" height="1000" fill="url(#grid)"/>
+  <g fill="#e0ecd5" font-family="sans-serif" text-anchor="middle"><text x="500" y="65" font-size="28">BOUNDARY OUTPOST</text><text x="235" y="265" font-size="20">HANGAR</text><text x="765" y="255" font-size="18">COMMS</text><text x="500" y="980" font-size="16">INFINITE SCENES · TEST MAP</text></g>
+</svg>

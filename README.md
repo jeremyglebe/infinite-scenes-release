@@ -2,7 +2,7 @@
 
 Radar-first infinite battlefields for Foundry VTT v14.
 
-**Early development release · 0.0.1 · Foundry VTT minimum 14, verified 14**
+**Early development release · 0.1.0 · Foundry VTT minimum 14, verified 14**
 
 Infinite Scenes adds an abstract radar battlefield with free panning and zooming. Place a normal
 scene inside it, zoom into the detailed map, and zoom back out to the radar. Each player changes

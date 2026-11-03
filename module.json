@@ -1,0 +1,33 @@
+{
+  "id": "infinite-scenes",
+  "title": "Infinite Scenes",
+  "description": "Radar-first infinite battlefields for Foundry VTT v14.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "drowsyprof"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "esmodules": [
+    "scripts/infinite-scenes.mjs"
+  ],
+  "styles": [
+    "styles/infinite-scenes.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "url": "https://github.com/jeremyglebe/infinite-scenes-release",
+  "manifest": "https://github.com/jeremyglebe/infinite-scenes-release/releases/latest/download/module.json",
+  "download": "https://github.com/jeremyglebe/infinite-scenes-release/releases/download/v0.1.0/module.zip"
+}
