@@ -1,0 +1,50 @@
+name: Release Foundry Package
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out public module repository
+        uses: actions/checkout@v4
+
+      - name: Validate package files
+        id: package
+        run: |
+          if test -f module.json && ! test -f system.json; then
+            kind=module
+          elif test -f system.json && ! test -f module.json; then
+            kind=system
+          else
+            echo 'Expected exactly one of module.json or system.json.' >&2
+            exit 1
+          fi
+          echo "kind=$kind" >> "$GITHUB_OUTPUT"
+          test -d scripts
+          test -d styles
+
+      - name: Create package zip
+        env:
+          PACKAGE_KIND: ${{ steps.package.outputs.kind }}
+        run: |
+          zip -r "$PACKAGE_KIND.zip" . \
+            -x "$PACKAGE_KIND.zip" \
+            -x ".git/*" \
+            -x ".github/*"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            ${{ steps.package.outputs.kind }}.json
+            ${{ steps.package.outputs.kind }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
